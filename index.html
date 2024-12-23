@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>تسجيل الدخول</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">الفصل الدراسي</a>
+                    <div class="dropdown-content">
+                        <a href="#">الفصل الأول</a>
+                        <a href="#">الفصل الثاني</a>
+                        <a href="#">الفصل الثالث</a>
+                        <a href="#">الفصل الرابع</a>
+                        <a href="#">الفصل الخامس</a>
+                        <a href="#">الفصل السادس</a>
+                        <a href="#">الفصل السابع</a>
+                        <a href="#">الفصل الثامن</a>
+                        <a href="#">الفصل التاسع</a>
+                        <a href="#">الفصل العاشر</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">التخصص</a>
+                    <div class="dropdown-content">
+                        <a href="#">بكالوريوس علوم حاسوب</a>
+                        <a href="#">بكالوريوس تقنية معلومات</a>
+                        <a href="#">دبلوم تقنية معلومات</a>
+                        <a href="#">نظم معلومات إدارية</a>
+                        <a href="#">نظم معلومات محاسبية</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">القائمة الرئيسية</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="dark-mode-toggle">الوضع الليلي</a>
+                        <a href="#">اللغة</a>
+                        <a href="#">المساعدة</a>
+                        <a href="#">الدعم</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>اختر نوع الحساب</h2>
+        <form id="login-form">
+            <label for="account-type">نوع الحساب:</label>
+            <select id="account-type" onchange="toggleFormFields()">
+                <option value="student">طالب</option>
+                <option value="supervisor">مشرف</option>
+            </select>
+
+            <div id="student-fields">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">رقم الهاتف (واتساب):</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div id="supervisor-fields" class="hidden">
+                <label for="supervisor-email">البريد الإلكتروني:</label>
+                <input type="email" id="supervisor-email" name="email" required>
+
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 موقعي البرمجي. جميع الحقوق محفوظة.
+    </footer>
+</body>
+</html>
