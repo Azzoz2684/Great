@@ -16,12 +16,14 @@ def register():
         users.append({
             'name': data.get('name'),
             'phone': data.get('phone'),
-            'email': data.get('email')
+            'email': data.get('email'),
+            'selection': data.get('selection')  # حفظ الخيار المحدد من قبل المستخدم
         })
     elif account_type == 'supervisor':
         supervisors.append({
             'email': data.get('email'),
-            'password': data.get('password')
+            'password': data.get('password'),
+            'selection': data.get('selection')  # حفظ الخيار المحدد من قبل المشرف
         })
     return jsonify({'message': 'تم إنشاء الحساب بنجاح!'})
 
@@ -35,11 +37,11 @@ def login():
     if account_type == 'student':
         for user in users:
             if user['email'] == email:
-                return jsonify({'message': 'تم تسجيل الدخول كطالب!'})
+                return jsonify({'message': 'تم تسجيل الدخول كطالب!', 'selection': user['selection']})
     elif account_type == 'supervisor':
         for supervisor in supervisors:
             if supervisor['email'] == email and supervisor['password'] == data.get('password'):
-                return jsonify({'message': 'تم تسجيل الدخول كمشرف!'})
+                return jsonify({'message': 'تم تسجيل الدخول كمشرف!', 'selection': supervisor['selection']})
     return jsonify({'message': 'بيانات غير صحيحة!'}), 401
 
 # دالة لتحميل الملفات من قبل المشرفين
