@@ -6,7 +6,7 @@
     <title>منصة التحميل - Azoz</title>
     <style>
         :root {
-            --secondary-color: #e74c3c;  /* لون أكثـر حيوية للأزرار */
+            --secondary-color: #e74c3c;
         }
 
         * {
@@ -18,28 +18,31 @@
         body {
             font-family: 'Arial', sans-serif;
             background-image: url('img/b.jpg');
-            background-attachment: fixed; /* إضافة هذه الخاصية */
+            background-attachment: fixed;
             background-size: cover;
             background-position: center;
             line-height: 1.6;
-            background-repeat: no-repeat; /* إضافة هذه الخاصية */
+            background-repeat: no-repeat;
         }
+
         footer {
             text-align: center;
             padding: 2px;
             margin-right: 0px;
             padding-top: 10px;
             background: black;
-            color: white ;
+            color: white;
             display: flex;
             justify-content: space-between;
-         }
-         #f1 {
-             width:50%;
-         }
-         #f2 {
-             width:50%;
-         }
+        }
+
+        #f1 {
+            width:50%;
+        }
+
+        #f2 {
+            width:50%;
+        }
 
         .container {
             max-width: 1200px;
@@ -48,7 +51,7 @@
         }
 
         h1 {
-            color:white; /* البنفسجي العميق */
+            color: white;
             text-align: center;
             margin: 40px 0;
         }
@@ -60,7 +63,7 @@
         }
 
         .category-box {
-            background: rgba(25, 55, 25, 0.9); /* خلفية شبه شفافة */
+            background: rgba(25, 55, 25, 0.9);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -80,31 +83,27 @@
         }
 
         .file-item {
-            display: block;
             padding: 12px 0;
             border-bottom: 1px solid #eee;
-            margin-bottom: 10px; /* إضافة هامش أسفل كل عنصر */
-            text-align: center; /* محاذاة النص في منتصف العنصر */
-         }
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
         .file-name {
-            color: #2ECC71; /* الأخضر الزمردي */
-            flex: 2;
-            
+            color: #2ECC71;
+            display: block;
+            margin-bottom: 8px;
         }
 
         .download-btn {
             background: var(--secondary-color);
             color: white;
             border: none;
-            //margin-top: 15px;
-            padding: 4px 8px;
+            padding: 8px 16px;
             border-radius: 5px;
             cursor: pointer;
             transition: opacity 0.3s;
-            margin-left:0px;
-            width:50%;
-            margin-block-end: 10px;
+            width: 50%;
         }
 
         .download-btn:hover {
@@ -115,6 +114,15 @@
             .categories-grid {
                 grid-template-columns: 1fr;
             }
+            
+            footer {
+                flex-direction: column;
+            }
+            
+            #f1, #f2 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -123,176 +131,260 @@
         <h1>مرحبآٓ بك في سلسلة صفحات عزوز نتمنى أن تعجبك خدماتنا♡</h1>
         
         <div class="categories-grid">
-                                                                                  <!-- قسم1 -->
+            <!-- قسم1: تطبيقات الحاسب -->
             <div class="category-box">
                 <h2 class="category-title">تطبيقات الحاسب<br>خاص بقسم تقنيه</h2>
                 <div class="file-item">
-                    <span class="file-name">تطبيقات الحاسب1.ppt</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب2.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب3.ppt</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب4.ppt</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب5.ppt</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب6.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب7.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب8.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">تطبيقات الحاسب9.pptx</span><br>
+                    <span class="file-name">تطبيقات الحاسب1.ppt</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب2.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب3.ppt</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب4.ppt</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب5.ppt</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب6.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب7.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب8.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">تطبيقات الحاسب9.pptx</span>
                     <button class="download-btn">تحميل</button>
                 </div>
             </div>
-                                                                                  <!-- قسم2 -->
+
+            <!-- قسم2: رياضيات -->
             <div class="category-box">
                 <h2 class="category-title">رياضيات<br>خاص بقسم علوم</h2>
                 <div class="file-item">
-                    <span class="file-name">رياضيات-الدكتورة1.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">رياضيات-الدكتورة2.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">رياضيات-الدكتورة3.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">رياضيات-كامل.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
+                    <span class="file-name">رياضيات-الدكتورة1.pdf</span>
+                    <button class="download-btn">تحميل</button>
                 </div>
-            </div>
-                                                                                  <!-- قسم3 -->
-            <div class="category-box">
-                <h2 class="category-title">كتب</h2>
                 <div class="file-item">
-                    <span class="file-name">كتاب تعلم بايثون1.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">كتاب تعلم بايثون2.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">كتاب تعلم بايثون3.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">كتاب رياضيات.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
+                    <span class="file-name">رياضيات-الدكتورة2.pdf</span>
+                    <button class="download-btn">تحميل</button>
                 </div>
-            </div>
-                                                                                  <!-- قسم4 -->
-            <div class="category-box">
-                <h2 class="category-title">مفاهيم قواعد بيانات</h2>
                 <div class="file-item">
-                    <span class="file-name">مفاهيم قواعد بيانات 1.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">مفاهيم قواعد بيانات 2.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">مفاهيم قواعد بيانات 3.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">مفاهيم قواعد بيانات 4.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">مفاهيم قواعد بيانات 5.ppt</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">مفاهيم قواعد بيانات 6.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
+                    <span class="file-name">رياضيات-الدكتورة3.pdf</span>
+                    <button class="download-btn">تحميل</button>
                 </div>
-            </div>
-                                                                                  <!-- قسم5 -->
-            <div class="category-box">
-                <h2 class="category-title">نظم تشغيل</h2>
                 <div class="file-item">
-                    <span class="file-name">نظم_تشغيل1.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">نظم_تشغيل2.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">نظم_تشغيل3.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">نظم_تشغيل4.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">نظم_تشغيل5.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">نظم_تشغيل6.pdf</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                </div>
-            </div>
-                                                                                  <!-- قسم6 -->
-            <div class="category-box">
-                <h2 class="category-title">هياكل_بيانات</h2>
-                <div class="file-item">
-                    <span class="file-name">هياكل_بيانات1.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">هياكل_بيانات2.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">هياكل_بيانات3.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">هياكل_بيانات4.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">هياكل_بيانات5.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">هياكل_بيانات6.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                </div>
-            </div>
-                                                                                  <!-- قسم7 -->
-            <div class="category-box">
-                <h2 class="category-title">لغة بايثون</h2>
-                <div class="file-item">
-                    <span class="file-name">python1.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python2.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python3.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python4.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python5.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python6.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python7.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">python8.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
+                    <span class="file-name">رياضيات-كامل.pdf</span>
+                    <button class="download-btn">تحميل</button>
                 </div>
             </div>
 
-                                                                                  <!-- قسم8 -->
+            <!-- قسم3: كتب -->
+            <div class="category-box">
+                <h2 class="category-title">كتب</h2>
+                <div class="file-item">
+                    <span class="file-name">كتاب تعلم بايثون1.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">كتاب تعلم بايثون2.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">كتاب تعلم بايثون3.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">كتاب رياضيات.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+            </div>
+
+            <!-- قسم4: مفاهيم قواعد بيانات -->
+            <div class="category-box">
+                <h2 class="category-title">مفاهيم قواعد بيانات</h2>
+                <div class="file-item">
+                    <span class="file-name">مفاهيم قواعد بيانات 1.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">مفاهيم قواعد بيانات 2.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">مفاهيم قواعد بيانات 3.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">مفاهيم قواعد بيانات 4.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">مفاهيم قواعد بيانات 5.ppt</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">مفاهيم قواعد بيانات 6.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+            </div>
+
+            <!-- قسم5: نظم تشغيل -->
+            <div class="category-box">
+                <h2 class="category-title">نظم تشغيل</h2>
+                <div class="file-item">
+                    <span class="file-name">نظم_تشغيل1.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">نظم_تشغيل2.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">نظم_تشغيل3.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">نظم_تشغيل4.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">نظم_تشغيل5.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">نظم_تشغيل6.pdf</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+            </div>
+
+            <!-- قسم6: هياكل_بيانات -->
+            <div class="category-box">
+                <h2 class="category-title">هياكل_بيانات</h2>
+                <div class="file-item">
+                    <span class="file-name">هياكل_بيانات1.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">هياكل_بيانات2.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">هياكل_بيانات3.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">هياكل_بيانات4.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">هياكل_بيانات5.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">هياكل_بيانات6.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+            </div>
+
+            <!-- قسم7: لغة بايثون -->
+            <div class="category-box">
+                <h2 class="category-title">لغة بايثون</h2>
+                <div class="file-item">
+                    <span class="file-name">python1.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python2.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python3.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python4.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python5.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python6.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python7.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">python8.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+            </div>
+
+            <!-- قسم8: قواعد بيانات معمل -->
             <div class="category-box">
                 <h2 class="category-title">قواعد بيانات معمل</h2>
                 <div class="file-item">
-                    <span class="file-name">sql1.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">sql2.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">sql3.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
-                    <span class="file-name">sql4.pptx</span><br>
-                    <button class="download-btn">تحميل</button><br>
+                    <span class="file-name">sql1.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">sql2.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">sql3.pptx</span>
+                    <button class="download-btn">تحميل</button>
+                </div>
+                <div class="file-item">
+                    <span class="file-name">sql4.pptx</span>
+                    <button class="download-btn">تحميل</button>
                 </div>
             </div>
-            
         </div>
     </div>
+    
     <footer>
-      <div id="f1">
-    <h3>تواصل مع المدير:</h3>
-      <a href="https://www.facebook.com/profile.php?id=61562260692432" target="_blank">
-        <img src="img/f.jpg" alt="فيسبوك" width="30" height="30" border="1" style="border-radius: 10px;">
-      </a>
-      <a href="https://wa.me/0908193849" target="_blank">
-        <img src="img/w.jpg" alt="واتساب" width="30" height="30" border="1" style="border-radius: 10px;">
-      </a>
-          <h3>تبرع لنا:</h3>
-          <p>رقم حساب بنكك:3724160</p>
-      </div>
-      <div id="f2">
-    <h3>من نحن:</h3>
-    <p>نحن فريق من المبرمجين، نهدف إلى رفع الطلاب نحو القمة؛ ليكونوا الأفضل، ونسعى جاهدين لحل كل ما يواجههم من مشاكل في الحصول على المقررات الدراسية، أو المراجع العلمية، وغيرها.  
+        <div id="f1">
+            <h3>تواصل مع المدير:</h3>
+            <a href="https://www.facebook.com/profile.php?id=61562260692432" target="_blank">
+                <img src="img/f.jpg" alt="فيسبوك" width="30" height="30" border="1" style="border-radius: 10px;">
+            </a>
+            <a href="https://wa.me/qr/L3O2YJLHIQLFP1" target="_blank">
+                <img src="img/w.jpg" alt="واتساب" width="30" height="30" border="1" style="border-radius: 10px;">
+            </a>
+            <h3>تبرع لنا:</h3>
+            <p>رقم حساب بنكك:3724160</p>
+        </div>
+        <div id="f2">
+            <h3>من نحن:</h3>
+            <p>نحن فريق من المبرمجين، نهدف إلى رفع الطلاب نحو القمة؛ ليكونوا الأفضل، ونسعى جاهدين لحل كل ما يواجههم من مشاكل في الحصول على المقررات الدراسية، أو المراجع العلمية، وغيرها.  
 ونرجو أن ينال الموقع إعجابكم، وأن يكون خطوة راسخة في رحلتكم التعليمية نحو التميز والإبداع.</p>
-     </div>
+        </div>
     </footer>
+    
     <script>
-        // تفعيل أزرار التحميل
         document.querySelectorAll('.download-btn').forEach(button => {
             button.addEventListener('click', function() {
-                const fileName = this.closest('.file-item').querySelector('.file-name').textContent;               
-                 window.location.href = 'uploads/' + fileName;
+                const fileName = this.closest('.file-item').querySelector('.file-name').textContent.trim();
+                window.location.href = 'uploads/' + encodeURIComponent(fileName);
             });
         });
     </script>
