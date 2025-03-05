@@ -324,7 +324,6 @@
         document.querySelectorAll('.download-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const fileName = this.closest('.file-item').querySelector('.file-name').textContent.trim();
-                alert(`جاري تحميل الملف: ${fileName}`);
                 window.location.href = 'uploads/' + encodeURIComponent(fileName);
             });
         });
