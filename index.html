@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة التحميل - Azoz</title>
+    <meta name="description" content="موقع تحميل محاضرات جامعة دنقلا - كلية علوم الحاسوب (السمستر الرابع). نوفر محاضرات في Python، قواعد البيانات، هياكل البيانات، وغيرها.">
+    <title>منصة التحميل - محاضرات جامعة دنقلا | Azoz</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- كود إعلانات جوجل -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="jGqnaqYCY3pylB8gAmj0s0Yt_7dRnVHb_R5taPQhzWo" />
 </head>
 <body>
+    <!-- إعلان في الهيدر 
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+-->
     <header>
         <p id="header">مرحبآٓ بك في سلسلة صفحات عزوز نتمنى أن تعجبك خدماتنا♡</p>
     </header>
@@ -22,7 +37,8 @@
     </div>
     
     <div class="container">
-        <h1>موقع تحميل محاضرات السمستر الرابع<br> (جامعه دنقلا - كليه علوم الحاسوب)<br> نتمنى لكم التوفيق♡</h1>
+        <h1>موقع تحميل محاضرات السمستر الرابع<br> <p style="color:white"> (جامعه دنقلا - كليه علوم الحاسوب)</p> نتمنى لكم التوفيق♡</h1>
+        
         
         <div class="categories-grid">
             <!-- قسم1: تطبيقات الحاسب -->
@@ -255,6 +271,18 @@
         </div>
     </div>
     
+    <!-- إعلان في الفوتر 
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    -->
+    
     <footer>
         <div id="f1">
             <h3>تواصل مع المدير:</h3>
@@ -276,57 +304,55 @@
         </div>
     </footer>
     
-    <script>
-    // إنشاء القائمة المنسدلة ديناميكيًا
-        const menuItems = [
-            'تطبيقات الحاسب',
-            'رياضيات',
-            'كتب',
-            'مفاهيم قواعد بيانات',
-            'نظم تشغيل',
-            'هياكل_بيانات',
-            'لغة بايثون',
-            'قواعد بيانات معمل'
-        ];
-
-        const dropdownMenu = document.getElementById('dropdownMenu');
-        menuItems.forEach((item, index) => {
-            const link = document.createElement('a');
-            link.href = `#section${index + 1}`;
-            link.textContent = item;
-            link.onclick = () => smoothScroll(`section${index + 1}`);
-            dropdownMenu.appendChild(link);
-        });
-
-        function toggleMenu() {
-            dropdownMenu.style.display = 
-                dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    <!-- بيانات منظمة (Schema) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "منصة التحميل - جامعة دنقلا",
+        "description": "موقع لتوفير محاضرات كلية علوم الحاسوب - جامعة دنقلا.",
+        "url": "https://azzoz2684.github.io/Great/",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "rdoan2684@gmail.com",
+            "telephone": "0908193849"
         }
+    }
+    </script>
+    
+    <script>
+    const menuItems = ['تطبيقات الحاسب', 'رياضيات', 'كتب', 'مفاهيم قواعد بيانات', 'نظم تشغيل', 'هياكل_بيانات', 'لغة بايثون', 'قواعد بيانات معمل'];
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    
+    menuItems.forEach((item, index) => {
+        const link = document.createElement('a');
+        link.href = `#section${index + 1}`;
+        link.textContent = item;
+        link.onclick = () => {
+            document.getElementById(`section${index + 1}`).scrollIntoView({ behavior: 'smooth' });
+            dropdownMenu.style.display = 'none';
+        };
+        dropdownMenu.appendChild(link);
+    });
 
-        function smoothScroll(targetId) {
-            const target = document.querySelector(`.category-title:contains('${targetId}')`);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    function toggleMenu() {
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.sidebar-menu')) {
             dropdownMenu.style.display = 'none';
         }
+    });
 
-        // إغلاق القائمة عند النقر خارجها
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.sidebar-menu')) {
-                dropdownMenu.style.display = 'none';
-            }
+    // دالة التحميل
+    document.querySelectorAll('.download-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const fileName = this.closest('.file-item').querySelector('.file-name').textContent.trim();
+            alert(`جاري تحميل الملف: ${fileName}`);
+            window.location.href = 'uploads/' + encodeURIComponent(fileName);
         });
-    
-        document.querySelectorAll('.download-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const fileName = this.closest('.file-item').querySelector('.file-name').textContent.trim();
-                window.location.href = 'uploads/' + encodeURIComponent(fileName);
-            });
-        });
+    });
     </script>
 </body>
 </html>

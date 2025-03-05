@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://azzoz2684.github.io/Great/sitemap.xml
