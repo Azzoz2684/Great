@@ -4,131 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة التحميل - Azoz</title>
-    <style>
-        :root {
-            --secondary-color: #e74c3c;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url('img/b.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            line-height: 1.6;
-            background-repeat: no-repeat;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2px;
-            margin-right: 0px;
-            padding-top: 10px;
-            background: black;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #f1 {
-            width:50%;
-        }
-
-        #f2 {
-            width:50%;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .category-box {
-            background: rgba(25, 55, 25, 0.9);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .category-box:hover {
-            transform: translateY(-5px);
-        }
-
-        .category-title {
-            color: var(--secondary-color);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .file-item {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .file-name {
-            color: #2ECC71;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .download-btn {
-            background: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: opacity 0.3s;
-            width: 50%;
-        }
-
-        .download-btn:hover {
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            footer {
-                flex-direction: column;
-            }
-            
-            #f1, #f2 {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <p id="header">مرحبآٓ بك في سلسلة صفحات عزوز نتمنى أن تعجبك خدماتنا♡</p>
+    </header>
+    <!-- القائمة المنسدلة -->
+    <div class="sidebar-menu">
+        <button class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="dropdown-content" id="dropdownMenu">
+            <!-- سيتم ملؤها بواسطة JavaScript -->
+        </div>
+    </div>
+    
     <div class="container">
-        <h1>مرحبآٓ بك في سلسلة صفحات عزوز نتمنى أن تعجبك خدماتنا♡</h1>
+        <h1>موقع تحميل محاضرات السمستر الرابع <br> نتمنى لكم التوفيق♡</h1>
         
         <div class="categories-grid">
             <!-- قسم1: تطبيقات الحاسب -->
@@ -370,8 +264,10 @@
             <a href="https://wa.me/qr/L3O2YJLHIQLFP1" target="_blank">
                 <img src="img/w.jpg" alt="واتساب" width="30" height="30" border="1" style="border-radius: 10px;">
             </a>
-            <h3>تبرع لنا:</h3>
-            <p>رقم حساب بنكك:3724160</p>
+            <h3>رقم الهاتف:</h3>
+            <p>0908193849</p>
+            <h3> تبرع لنا عبر بنكك:</h3>
+            <p>رقم الحساب:3724160</p>
         </div>
         <div id="f2">
             <h3>من نحن:</h3>
@@ -381,9 +277,54 @@
     </footer>
     
     <script>
+    // إنشاء القائمة المنسدلة ديناميكيًا
+        const menuItems = [
+            'تطبيقات الحاسب',
+            'رياضيات',
+            'كتب',
+            'مفاهيم قواعد بيانات',
+            'نظم تشغيل',
+            'هياكل_بيانات',
+            'لغة بايثون',
+            'قواعد بيانات معمل'
+        ];
+
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        menuItems.forEach((item, index) => {
+            const link = document.createElement('a');
+            link.href = `#section${index + 1}`;
+            link.textContent = item;
+            link.onclick = () => smoothScroll(`section${index + 1}`);
+            dropdownMenu.appendChild(link);
+        });
+
+        function toggleMenu() {
+            dropdownMenu.style.display = 
+                dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function smoothScroll(targetId) {
+            const target = document.querySelector(`.category-title:contains('${targetId}')`);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+            dropdownMenu.style.display = 'none';
+        }
+
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.sidebar-menu')) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    
         document.querySelectorAll('.download-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const fileName = this.closest('.file-item').querySelector('.file-name').textContent.trim();
+                alert(`جاري تحميل الملف: ${fileName}`);
                 window.location.href = 'uploads/' + encodeURIComponent(fileName);
             });
         });
