@@ -124,6 +124,7 @@ footer > div:last-child {
             color: white;
             text-align: center;
             margin: 40px 0;
+            font-size: 22px;
         }
 
         .categories-grid {
