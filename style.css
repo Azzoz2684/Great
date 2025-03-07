@@ -87,6 +87,7 @@ header {
     width: 98%;
     padding: 4px;
     margin: 4px;
+    margin-top: 52px;
     background: black;
     border: 2px solid wheat;
 }
@@ -181,6 +182,18 @@ h1 {
 
 .download-btn:hover {
     opacity: 0.9;
+}
+#first{
+    font-size: 12px;
+    margin: 2px;
+    padding: 3px;
+    margin-top: 10px;
+    border: white ;
+    background: midnightblue;
+    border-color: aliceblue;
+    border-style: dashed;
+    color: aliceblue;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
